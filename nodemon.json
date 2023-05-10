@@ -1,0 +1,13 @@
+{
+  "verbose": true,
+  "watch": [
+    "src/**/*.ts"
+  ],
+  "ignore": [
+    ".git",
+    "node_modules/",
+    "dist/"
+  ],
+  "exec": "tsc && node --inspect dist/app.js",
+  "ext": "ts json"
+}

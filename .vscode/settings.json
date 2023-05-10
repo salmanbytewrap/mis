@@ -1,0 +1,21 @@
+{
+    "cSpell.words": [
+        "ACCESSKEYID",
+        "BUCKETNAME",
+        "DBURI",
+        "EMAILPASSWORD",
+        "JWTSECRET",
+        "PAYMENTCATEGORYID",
+        "SECRETACCESSKEY",
+        "SESSIONTOKEN",
+        "STRIPEBASEURL",
+        "STRIPEPUBLISHABLEKEY",
+        "STRIPESECRETKEY",
+        "VPCID",
+        "authtype",
+        "nospace",
+        "onespace",
+        "openapi",
+        "upsert"
+    ]
+}
