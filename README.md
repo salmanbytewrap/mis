@@ -101,4 +101,15 @@ email: salman@gmail.com
 
 password:  salman@123
             
- Auth Key in Heade : idToken           
+ Auth Key in Heade : idToken        
+
+
+ ## DB table
+ CREATE TABLE `users` (
+  `firstName` varchar(255) DEFAULT NULL,
+  `lastName` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `createdAt` varchar(255) DEFAULT NULL,
+  `updatedAt` varchar(255) DEFAULT NULL,
+  `type` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;   
