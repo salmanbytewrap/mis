@@ -2,6 +2,7 @@ import * as jwt from 'jsonwebtoken';
 import { createToken } from '../../helpers/JwtHelper';
 
 export let login = async (req, res) => {
+    console.log("api called")
     let auth: any = req.headers.authorization;
     let data = auth.split("Basic");
     let encrypt = Buffer.from(data[1], 'base64').toString();

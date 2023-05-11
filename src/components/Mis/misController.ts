@@ -40,7 +40,7 @@ export const create = async (req: Request, res: Response) => {
             return res.status(400).json(error)
         }
         let response = new ResponseSuccess({ data: data });
-        return res.status(200).json(response)
+        return res.status(201).json(response)
     })
 
 };
