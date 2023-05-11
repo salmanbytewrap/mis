@@ -38,12 +38,6 @@ Install Pm2 and nginx
  -  pm2 init simple
  - This will generate a sample ecosystem.config.js:
  - add following lines in ecosystem file
-  module.exports = {
-  apps : [{
-    name   : "app1",
-    script : "./app.js" // build Path your dist/app.js
-  }]
-}
 Install Git and clone repository from GitHub
 Install dependencies
 Run the application using Pm2
@@ -51,6 +45,28 @@ Configure security group to access via public URL
 Access the application in browser
 ```
 
+# Acting on PM2 Configuration File
+### pm2 sample file
+module.exports = {
+  apps : [{
+    name   : "app1",
+    script : "./app.js" // build Path your dist/app.js
+  }]
+}
+# Start all applications
+pm2 start ecosystem.config.js
+
+# Stop all
+pm2 stop ecosystem.config.js
+
+# Restart all
+pm2 restart ecosystem.config.js
+
+# Reload all
+pm2 reload ecosystem.config.js
+
+# Delete all
+pm2 delete ecosystem.config.js
 ## Architecture
 ```
 ├── app.ts
