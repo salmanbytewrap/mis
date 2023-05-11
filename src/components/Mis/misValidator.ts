@@ -5,6 +5,7 @@
 import {
   IsEmail,
   IsNotEmpty,
+  IsOptional,
   IsString,
 
 } from "class-validator";
@@ -21,5 +22,15 @@ export class CreateRecord {
   @IsNotEmpty({ message: "email should not be empty" })
   @IsEmail()
   email: string;
+
+  @IsNotEmpty()
+  @IsString()
+  type: string;
+
+  @IsOptional()
+  createdAt?: Date
+
+  @IsOptional()
+  updatedAt?: Date
 
 }

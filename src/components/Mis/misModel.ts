@@ -5,6 +5,7 @@ const Users = function (options) {
     this.firstName = options.firstName;
     this.lastName = options.lastName;
     this.email = options.email;
+    this.type = options.type;
     this.createdAt = new Date();
     this.updatedAt = new Date();
 };
@@ -19,10 +20,16 @@ Users.create = function (user, result) {
     });
 };
 
-Users.read = function (offset, limit, result) {
+Users.read = function (offset, limit, type, result) {
+    console.log(type)
+    let query = `SELECT * FROM users LIMIT ${offset}, ${limit}`;
+    if (type) {
+        query = `SELECT * FROM users WHERE type='${type}' LIMIT ${offset}, ${limit}`
+    }
 
+    console.log(query);
 
-    connection.query(`SELECT * FROM users LIMIT ${offset}, ${limit}`, (err, res) => {
+    connection.query(query, (err, res) => {
         if (err) {
             result(err, null);
         } else {

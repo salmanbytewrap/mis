@@ -8,6 +8,7 @@ import config from "./config/Config";
 import router from "./routers/index";
 
 const logger = tracer.colorConsole();
+var json2xls = require('json2xls');
 export const app = express();
 
 app.set("port", config.PORT || 8080);
@@ -15,6 +16,8 @@ app.set("port", config.PORT || 8080);
 app.use(cors());
 
 app.use(express.json());
+
+app.use(json2xls.middleware);
 
 app.use(express.urlencoded({ extended: true }));
 

@@ -9,6 +9,6 @@ import * as misController from "./misController";
 const router = Router();
 
 router.post("/", decodeToken, misController.create);
-router.get("/", decodeToken, misController.getAllusers);
+router.get("/", misController.getAllusers);
 
 export default router;
